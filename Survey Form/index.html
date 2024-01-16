@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Preencha o formulário:</p>
+
+  <form id="survey-form">
+    <label for="name" id="name-label">Name:<br>
+      <input type="text" id="name" name="name" placeholder="Type your name..." required>
+    </label>
+
+    <label for="email" id="email-label">Email:<br>
+      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Type your email..." required>
+    </label>
+
+    <label for="number" id="number-label">Number:<br>
+      <input type="number" id="number" name="number" min="8" max="9" pattern="[0-9]" placeholder="Type your number...">
+    </label>
+
+    <fieldset>
+      <legend>What best describes your actual situation?</legend>
+      <div id="situation">
+        <label for="employed"><input type="checkbox" id="employed" name="situation" value="employed"> Employed</label>
+        <label for="unemployed"><input type="checkbox" id="unemployed" name="situation" value="unemployed"> Unemployed</label>
+        <label for="student"><input type="checkbox" id="student" name="situation" value="student"> Student</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>How do you identify?</legend>
+      <div id="gender">
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" checked> Male</label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female"> Female</label>
+        <label for="rather-not">
+          <input type="radio" id="rather-not" name="gender" value="rather-not"> I'd rather not</label>
+      </div>
+    </fieldset>
+
+    <label for="dropdown">How do you consider yourself?<br>
+      <select id="dropdown">
+        <option value="" disabled selected>Select an option</option>
+        <option type="checkbox" id="Black" name="heteroidentification" value="black">Black</option>
+        <option type="checkbox" id="Brown-skinned" name="heteroidentification" value="brown-skinned">Brown-skinned</option>
+        <option type="checkbox" id="Indigenous" name="heteroidentification" value="indigenous">Indigenous</option>
+        <option type="checkbox" id="Latino(a)" name="heteroidentification" value="latino">Latino(a)</option>
+        <option type="checkbox" id="Asian" name="heteroidentification" value="asian">Asian</option>
+        <option type="checkbox" id="White" name="heteroidentification" value="white">White</option>
+      </select>
+    </label>
+
+    <label for="comments"> Any further comments?<br>
+      <textarea id="comments" name="comments" placeholder="Type your comment here...." value="comments"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </label>
+  </form>
+
+</body>
+
+</html>
